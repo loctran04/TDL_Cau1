@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnSum;
+    Button btnSum,btnMinus;
     EditText edtSoA,edtSoB,edtResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnSum = findViewById(R.id.btnTong);
+        btnMinus = findViewById(R.id.btnTru);
         edtSoA = findViewById(R.id.edtSoA);
         edtSoB = findViewById(R.id.edtSoB);
         edtResult = findViewById(R.id.edtResult);
@@ -28,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
                 Tong = soA + soB;
 
                 edtResult.setText(Tong +"");
+
+            }
+        });
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float soA = Float.parseFloat(edtSoA.getText().toString());
+                float soB = Float.parseFloat(edtSoB.getText().toString());
+                float Hieu;
+
+                Hieu = soA - soB;
+
+                edtResult.setText(Hieu +"");
 
             }
         });
