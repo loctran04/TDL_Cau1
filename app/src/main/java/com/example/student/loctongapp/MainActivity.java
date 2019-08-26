@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Tong = soA + soB;
 
-                edtResult.setText(Tong +"");
+                edtResult.setText(Tong +" !");
 
             }
         });
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Hieu = soA - soB;
 
-                edtResult.setText(Hieu +"");
+                edtResult.setText(Hieu +" !");
 
             }
         });
